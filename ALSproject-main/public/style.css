@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    margin: auto;
+}
+
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+main {
+    min-height: 85vh;
+}
+
+.letters {
+    font-size: 9rem;
+    padding-left: 20px;
+
+}
+
+@media (min-width: 800px) {
+    .letters {
+        padding: 20px;
+        font-size: 10rem;
+
+    }
+
+}
+
+@media (min-width: 1000px) {
+    .letters {
+        padding: 17px;
+        font-size: 13rem;
+
+    }
+
+}
