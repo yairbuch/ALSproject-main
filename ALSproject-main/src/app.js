@@ -1,7 +1,7 @@
 import "./routes/links.js";
 import setCounter from "./lettersSet/helpers/setCounter.js";
 import renderSlider from "./lettersSet/components/renderSlider.js";
-import { SLIDER_NEXT_BTN, SLIDER_PREV_BTN } from "./services/domService.js";
+import { SLIDER_NEXT_BTN, SLIDER_PREV_BTN, SLIDER_LETTERS1, SLIDER_LETTERS2, SLIDER_LETTERS3, SLIDER_LETTERS4, SLIDER_SHIFT_BTN, SENTENCE_FIELD } from "./services/domService.js";
 import onChangeSliderPic from "./lettersSet/helpers/onChangeSliderPic.js";
 import renderSlider2 from "./lettersSet/components/renderSlider2.js";
 import onChangeSliderPic2 from "./lettersSet/helpers/onChangeSliderPic2.js";
@@ -9,9 +9,17 @@ import renderSlider3 from "./lettersSet/components/renderSlider3.js";
 import onChangeSliderPic3 from "./lettersSet/helpers/onChangeSliderPic3.js";
 import renderSlider4 from "./lettersSet/components/renderSlider4.js";
 import onChangeSliderPic4 from "./lettersSet/helpers/onChangeSliderPic4.js";
+import onLettersChange from "./lettersSet/helpers/onLettersChange.js";
+import onLettersChange2 from "./lettersSet/helpers/onLettersChange2.js";
+import onLettersChange3 from "./lettersSet/helpers/onLettersChange3.js";
+import onLettersChange4 from "./lettersSet/helpers/onLettersChange4.js";
+import "./users/models/user.js"
 
 
-const letters = [
+
+
+
+window.letters = [
     {
         chart: 'י',
         color1: "red",
@@ -40,7 +48,7 @@ const letters = [
 ];
 
 
-const letters2 = [
+window.letters2 = [
     {
 
         chart2: 'ה',
@@ -76,7 +84,7 @@ const letters2 = [
 
 
 
-const letters3 = [
+window.letters3 = [
     {
 
         chart3: 'ר',
@@ -111,7 +119,7 @@ const letters3 = [
 ];
 
 
-const letters4 = [
+window.letters4 = [
     {
 
         chart4: 'ו',
@@ -162,6 +170,17 @@ renderSlider3(letters3, 0);
 let counter4 = setCounter(letters4, 0);
 renderSlider4(letters4, 0);
 
+let counter5 = setCounter(letters, 0);
+
+let counter6 = setCounter(letters2, 0);
+
+let counter7 = setCounter(letters3, 0);
+
+let counter8 = setCounter(letters4, 0);
+
+
+
+
 
 SLIDER_NEXT_BTN.addEventListener(
     "click",
@@ -203,3 +222,32 @@ SLIDER_PREV_BTN.addEventListener(
     "click",
     () => (counter4 = onChangeSliderPic4(letters4, counter4, "prev"))
 );
+
+
+SLIDER_LETTERS1.addEventListener(
+    "click",
+    () => (counter5 = onLettersChange(letters, counter5))
+);
+
+
+SLIDER_LETTERS2.addEventListener(
+    "click",
+    () => (counter6 = onLettersChange2(letters2, counter6))
+);
+
+
+SLIDER_LETTERS3.addEventListener(
+    "click",
+    () => (counter7 = onLettersChange3(letters3, counter7))
+);
+
+
+SLIDER_LETTERS4.addEventListener(
+    "click",
+    () => (counter8 = onLettersChange4(letters4, counter8))
+);
+
+SLIDER_SHIFT_BTN.onclick = function shift() {
+
+    SENTENCE_FIELD.textContent += ' ';
+}

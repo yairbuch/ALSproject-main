@@ -1,5 +1,6 @@
-
+let x = 0;
 const setCounter = (array, counter, controller = "") => {
+    x++;
     let newCounter;
     if (controller === 'next') {
         newCounter = counter < array.length - 1 ? counter + 1 : 0;

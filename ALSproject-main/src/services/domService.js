@@ -27,6 +27,7 @@ export const SLIDER_LETTERS3 = document.getElementById('slider-letters3');
 export const SLIDER_LETTERS4 = document.getElementById('slider-letters4');
 export const SLIDER_PREV_BTN = document.getElementById("slider-prev-btn");
 export const SLIDER_NEXT_BTN = document.getElementById("slider-next-btn");
+export const SLIDER_SHIFT_BTN = document.getElementById("slider-shift-btn")
 
 /*** Text ****/
-export const SENTENCE_FIELD = document.getElementById("sentenceField");
+export const SENTENCE_FIELD = document.getElementById("sentence-field");

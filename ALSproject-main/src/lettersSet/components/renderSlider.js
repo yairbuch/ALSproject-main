@@ -9,7 +9,6 @@ const renderSlider = (letters, num = 0) => {
 }
 
 
-
 export default renderSlider;
 
 
